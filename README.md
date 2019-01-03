@@ -1,3 +1,5 @@
+**This patch has already been updated by the [offical repo](https://github.com/CMU-Perceptual-Computing-Lab/openpose).**
+
 When building [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) with Nvidia Jetson TX2, [doc/installation_jetson_tx2.md](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/README.md) assumes Jetpack 3.1, cuda 8 and cudnn 6 as default. But if you are trying to install openpose under Jetpack 3.3, an error occurs as [cannot find -Iopencv_cudawarping](https://github.com/CMU-Perceptual-Computing-Lab/openpose/issues/918).
 
 This is becaues by opencv is not compatable with cuda 9 yet, as *opencv_cudawarping* cannot be found. But *opencv_cudawarping* is not required for opepnose to work under *Jecpack 3.3*. Also, caffe provided by openpose and openpose itself use opencv2 as default. Therefore by modifying some files, we can make openpose work under jecpack 3.3
